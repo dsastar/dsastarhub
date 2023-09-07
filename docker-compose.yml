@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  hub:
+    build: .
+    container_name: dsastarhub
+    ports:
+      - "8000:8000"
