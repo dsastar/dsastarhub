@@ -14,3 +14,6 @@ docker run -p $port:$prot $image
 
 # docker pull ansoncar/atomt:v3.2.3
 # docker run -d -p 5004:5004 ansoncar/atomt:v3.2.3
+
+
+# docker run -p 80:80 nginx

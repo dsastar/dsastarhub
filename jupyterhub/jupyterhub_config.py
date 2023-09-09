@@ -12,7 +12,6 @@ c.JupyterHub.spawner_class = 'dockerspawner.SwarmSpawner'
 c.JupyterHub.hub_ip = public_ips()[0]
 c.JupyterHub.admin_access = True
 c.Authenticator.admin_users = {'ansoncar',"Teresa","Maura"}
-
 c.Authenticator.allowed_users = {'ansoncar',"Teresa","Maura"}
 c.LocalAuthenticator.group_whitelist = ['hub']
 c.JupyterHub.authenticator_class = 'firstuseauthenticator.FirstUseAuthenticator'

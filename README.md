@@ -10,3 +10,4 @@
 - [dockerspawner ](https://jupyterhub-dockerspawner.readthedocs.io/en/latest/spawner-types.html#dockerspawner)
 - [The JupyterHub single-user server](https://jupyterhub.readthedocs.io/en/latest/explanation/singleuser.html)
 - [jupyterhub](https://tljh.jupyter.org/en/latest/index.html)
+- [使用 Docker 啟動 VS Code Server](https://blog.clarence.tw/2021/10/31/%E4%BD%BF%E7%94%A8-docker-%E5%95%9F%E5%8B%95-vs-code-server/)

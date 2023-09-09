@@ -12,5 +12,5 @@ RUN python3 -m pip install jupyter-client
 RUN python3 -m pip install jupyterhub-firstuseauthenticator
 
 EXPOSE 8000
-CMD [ "jupyterhub", "-f", "/dsastarhub/jupyterhub_config.py" ]
-
+CMD [ "jupyterhub" ]
+# CMD [ "jupyterhub", "-f", "/dsastarhub/jupyterhub_config.py" ]
