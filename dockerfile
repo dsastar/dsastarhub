@@ -1,5 +1,4 @@
 FROM nikolaik/python-nodejs:latest
-
 RUN apt-get update && apt-get install -y
 
 RUN npm install -g configurable-http-proxy
