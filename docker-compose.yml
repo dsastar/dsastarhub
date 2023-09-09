@@ -7,17 +7,21 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - jupyterhub
-  jupyterhub:
-    # build: .
-    image: jupyterhub/jupyterhub:latest
-    ports:
-      - 8000:8000
-    volumes:
-      - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
-  # hub:
-  #   build: .
+      # - jupyterhub
+      - eclipse-che
+  # jupyterhub:
+  #   # build: .
+  #   image: jupyterhub/jupyterhub:latest
   #   ports:
   #     - 8000:8000
   #   volumes:
-  #     - 
+  #     - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+  eclipse-che:
+    image: eclipse/che
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+    environment:
+      - CHE_MULTIUSER=true
+      - CHE_HOST=eclipse-che
+    command: start
