@@ -5,7 +5,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./src/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       # - jupyterhub
       - eclipse-che
@@ -15,12 +15,12 @@ services:
   #   ports:
   #     - 8000:8000
   #   volumes:
-  #     - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+  #     - ./src/juypterhub/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
   eclipse-che:
     image: eclipse/che
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./data:/data
+      - ./src/data:/data
     environment:
       - CHE_MULTIUSER=true
       - CHE_HOST=eclipse-che
